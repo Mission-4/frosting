@@ -1,0 +1,22 @@
+{
+    "name": "mission4/frosting",
+    "description": "Laravel Invite Only Auth",
+    "author": "Sam Podlogar",
+    "license": "MIT",
+    "version": "1.0.4",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Sam Podlogar",
+            "email": "phppirate@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mission4\\Frosting\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "~5.3"
+    }
+}
