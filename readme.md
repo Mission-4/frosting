@@ -38,8 +38,27 @@ Frosting::invite('user@example.com')->send();
 
 This will use the default mail driver to send an email to `user@example.com`
 
-
-
 - email
 - Unique_id
-- Created_byr
+- user_id
+
+## Class Methods
+
+### `invite($email)`
+Invite a person with `$email`.
+Returns an instance of the `Invite::class`
+
+### `list()`
+Get a collection of all the invites.
+
+### `invalidateInvitesForEmail($email)`
+Delete any invites with the said email.
+
+### `resolveInvite($unique_id)`
+Resolve an Invite by the Unique Identifier.
+
+### `confirmEmail($email)`
+Confirm there is an invitation for the said email.
+
+### `registerInviteObserver()`
+Register the Invite Observer to add a creating event for generating the Unique IDs.
