@@ -20,7 +20,6 @@ composer require mission4/frosting
 ```
 
 
-
 ## Usage
 
 ### Invite a User

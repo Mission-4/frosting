@@ -8,7 +8,12 @@ class InviteObserver
 {
     public function creating(Invite $invite)
     {
-        $invite->unique_id = str_random(40);
+        $pool = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+        $length = 16;
+        $id = substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
+
+        $invite->unique_id = $id;
+
         return $invite;
     }
 }
