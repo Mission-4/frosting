@@ -48,7 +48,7 @@ This will use the default mail driver to send an email to `user@example.com`
 Invite a person with `$email`.
 Returns an instance of the `Invite::class`
 
-### `list()`
+### `listInvites()`
 Get a collection of all the invites.
 
 ### `invalidateInvitesForEmail($email)`

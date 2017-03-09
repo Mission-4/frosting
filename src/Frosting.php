@@ -32,6 +32,15 @@ class Frosting
         return Invite::whereUniqueId($id)->firstOrFail();
     }
 
+    /**
+     * Get a collection of all Invites
+     * @return Illuminate\Collection Collection of Invites
+     */
+    public static function listInvites()
+    {
+        return Invite::latest()->get();
+    }
+
     public static function invalidateInvitesForEmail($email)
     {
         $invites = Invite::whereEmail($email)->get();
