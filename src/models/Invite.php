@@ -10,4 +10,13 @@ class Invite extends Model
     {
         dd('Sending the Invitation');
     }
+
+    public function jsonApi()
+    {
+        return [
+            'id' => $this->id,
+            'type' => "invites",
+            'attributes' => collect($this->attributes)->except($this->hidden)->except(['id']),
+        ];
+    }
 }

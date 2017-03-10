@@ -10,13 +10,14 @@ class Frosting
     /**
      * Create a new Invitation
      * @param  string $email The email of the person you want to invite
+     * @param  int $user_id Optional id of user who invites
      * @return Invite        Return the Created Invite
      */
-    public static function invite($email)
+    public static function invite($email, $user_id = null)
     {
         $invitation = new Invite();
         $invitation->email = $email;
-        $invitation->user_id = auth()->id();
+        $invitation->user_id = $user_id ?? auth()->id();
         $invitation->save();
 
         return $invitation;
@@ -41,12 +42,18 @@ class Frosting
         return Invite::latest()->get();
     }
 
+    /**
+     * @param $email
+     */
     public static function invalidateInvitesForEmail($email)
     {
         $invites = Invite::whereEmail($email)->get();
         $invites->each->delete();
     }
 
+    /**
+     * @param $email
+     */
     public static function confirmEmail($email)
     {
         return Invite::whereEmail($email)->firstOrFail();

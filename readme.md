@@ -4,11 +4,10 @@ Built as a Laravel package with an easy JSON api route system.
 
 ## Features
 
-- [ ] Api route to list Invites
-- [ ] Api route to create an Invite
-- [ ] Api route to delete and Invitaion
-- [ ] Api route to complete a registration
-- [ ] Frosting class to handle all other needed features
+- [x] Api route to list Invites
+- [x] Api route to create an Invite
+- [x] Api route to delete and Invitaion
+- [x] Frosting class to handle all other needed features
 
 
 
