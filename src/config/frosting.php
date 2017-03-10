@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'middleware' => ['web', 'auth'],
+    'middleware' => ['api'],
 ];

@@ -19,7 +19,7 @@ class FrostingServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/config/frosting.php' => config_path('frosting.php'),
-        ], 'config');
+        ], 'frosting');
     }
 
     /**
