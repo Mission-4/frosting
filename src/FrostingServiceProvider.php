@@ -17,9 +17,9 @@ class FrostingServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
 
-        // $this->publishes([
-        //     __DIR__ . '/js/components' => base_path('resources/assets/js/components/frosting'),
-        // ], 'frosting');
+        $this->publishes([
+            __DIR__ . '/config/frosting.php' => config_path('frosting.php'),
+        ], 'config');
     }
 
     /**
